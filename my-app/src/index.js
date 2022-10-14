@@ -3,83 +3,122 @@ import ReactDOM from 'react-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './style.css';
 import { Container, Image, Navbar, Nav, Row, Col } from 'react-bootstrap';
-import { Instagram, Facebook, Twitter } from 'react-bootstrap-icons';
-import logo from './dukeslogo.png'
-import mainpic from './dukebackground.png'
+import { Instagram, Facebook, Twitter, Youtube, Tiktok, Person, Search, Bag, Envelope } from 'react-bootstrap-icons';
+import grif from './griff.jpg';
 
 const TopMenu = () => (
-    <Container id="topMenu" fluid className="py-3">
+    <div className="bg-image img-fluid w-100" id="image">
+      <Container fluid className="py-3">
       <Navbar expand="lg">
         <Container>
-          <Navbar.Brand href="#home"><Image src={logo} width={200}/></Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
+          <Navbar.Toggle aria-controls="basic-navbar-nav"/>
+          <Navbar.Collapse className="justify-content-start">
             <Nav>
-              <Nav.Link href="#">MENU</Nav.Link>
-              <Nav.Link href="#">DUKE</Nav.Link>
-              <Nav.Link href="#">SHOP</Nav.Link>
-              <Nav.Link href="#">JOIN OUR TEAM</Nav.Link>
-              <Nav.Link href="#">CONTACT</Nav.Link>
-              <Nav.Link href="#" id="OTND">ORDER TAKEOOUT & DELIVERY</Nav.Link>
+              <Nav.Link href="#">Links</Nav.Link>
+              <Nav.Link href="#">Gift Cards</Nav.Link>
+              <Nav.Link href="#">FAQ</Nav.Link>
             </Nav>
+          </Navbar.Collapse>
+          <Navbar.Collapse className="justify-content-end">
+            <Nav.Link href="#" className="p-2"><Instagram/></Nav.Link>
+            <Nav.Link href="#" className="p-2"><Facebook/></Nav.Link>
+            <Nav.Link href="#" className="p-2"><Youtube/></Nav.Link>
+            <Nav.Link href="#" className="p-2"><Twitter/></Nav.Link>
+            <Nav.Link href="#" className="p-2"><Tiktok/></Nav.Link>
           </Navbar.Collapse>
         </Container>
       </Navbar>
     </Container>
+
+      <Container fluid className="py-3">
+        <Navbar expand="lg">
+          <Container>
+            <Navbar.Toggle aria-controls="basic-navbar-nav"/>
+            <Navbar.Collapse>
+              <Nav>
+                <Nav.Link><h1><strong>GRYFFIN</strong></h1></Nav.Link>
+              </Nav>
+            </Navbar.Collapse>
+            <Navbar.Collapse>
+              <Nav.Link href="#" className="p-2"><strong>SHOWS</strong></Nav.Link>
+              <Nav.Link href="#" className="p-2"><strong>MERCH</strong></Nav.Link>
+              <Nav.Link href="#" className="p-2"><strong>MUSIC</strong></Nav.Link>
+              <Nav.Link href="#" className="p-2"><strong>CONTACT</strong></Nav.Link>
+            </Navbar.Collapse>
+            <Navbar.Collapse className="justify-content-end">
+              <Nav.Link href="#" className="p-2"><Person/></Nav.Link>
+              <Nav.Link href="#" className="p-2"><Search/></Nav.Link>
+              <Nav.Link href="#" className="p-2"><Bag/></Nav.Link>
+            </Navbar.Collapse>
+          </Container>
+        </Navbar>
+      </Container>
+</div>
 );
 
 const MainImage = () => (
-    <Row className="justify-content-md-center pt-3 ">
+    <Row className="justify-content-md-center pt-3" id="image">
       <Col md="auto">
-        <Image fluid src={mainpic}/>
+        <Image fluid src={grif}/>
       </Col>
     </Row>
 );
 
 const BottomMenu = () => (
-    <footer id="bottom" className="footer mt-auto py-3">
-      <Container>
-        <Row>
-          <h1><strong>HOME OF DUKE KAHANAMOKU</strong></h1>
-          <div>
-            <p>
-              Make yourself at home, where the legend Duke Kahanamoku grew up swimming, surfing, canoeing and bodysurfing. In 1929, Duke rode a monster wave for 1 1/8 miles at Waikiki, likely the longest ride in modern times. You know that image in your mind
-              of Waikiki Beach, the one with Diamond Head in the distance and outrigger canoes in a turquoise bay of warm water? It’s real and it’s here every day. Splash, body surf or surf, in the warm, turquoise water just below Hawaii’s icon, Diamond Head
-              – just like Duke did.
-            </p>
-          </div>
-        </Row>
-        <Row>
-          <div className="container" id="bottomMenu">
-            <ul className="nav justify-content-center">
-              <li className="p-3"><strong>TS RESTAURANTS</strong></li>
+    <div id="bgcol">
+      <footer className="footer mt-auto py-3">
+        <Container>
+          <Row id="line">
+            <h5>ALIVE ALBUM COMING SOON ALIVE ALBUM COMING SOON ALIVE ALBUM COMING SOON ALIVE ALBUM COMING SOON</h5>
+          </Row>
+        </Container>
 
-              <li className="p-3"><strong>JOIN THE TEAM</strong></li>
+        <div className="container" id="bottomMenu">
+          <ul className="nav justify-content-center">
+            <li className="p-3">
+              GRYFFAM
+              <div>Join the fam and stay up to date on all</div>
+              <div>things Gryffin</div>
+              <input type="text" placeholder="Enter your email"/>
+              <div className="btn btn-dark"><Envelope/></div>
+              <hr/>
+              <div className="p-4"><Instagram/><Facebook/><Youtube/><Twitter/><Tiktok/></div>
+            </li>
 
-              <li className="p-3"><strong>BUY GIFT CARDS</strong></li>
+            <li className="p-3">
+              <div>MERCH</div>
+              <hr/>
+              Collections
+              <div>Jerseys</div>
+              <div>Shop All</div>
+              <div>Gift Cards</div>
+            </li>
 
-              <li className="p-3"><strong>WHAT IS HULA PIE</strong></li>
+            <li className="p-3">
+              HELP
+              <hr/>
+              <div>FAQs</div>
+              <div>Control</div>
+            </li>
 
-              <li className="p-3"><strong>LEGACY OF ALOHA</strong></li>
+            <li className="p-3">
+              POLICIES
+              <hr/>
+              <div>Privacy Policy</div>
+              <div>Terms of Service</div>
+              <div>Refund Policy</div>
+              <div>Shipping Policy</div>
 
-              <li className="p-3"><strong>AWARDS</strong></li>
+            </li>
 
-              <li className="p-3"><strong>CALL 808.922.2268</strong></li>
+          </ul>
+        </div>
 
-              <li className="p-3"><Facebook/></li>
-
-              <li className="p-3"><Twitter/></li>
-
-              <li className="p-3"><Instagram/></li>
-
-            </ul>
-          </div>
-        </Row>
-      </Container>
-    </footer>
+      </footer>
+    </div>
 );
 
-const Dukes = () => (
+const Gryff = () => (
     <div className="d-flex flex-column min-vh-100">
       <TopMenu />
       <MainImage />
@@ -88,4 +127,4 @@ const Dukes = () => (
 );
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<Dukes />);
+root.render(<Gryff />);
